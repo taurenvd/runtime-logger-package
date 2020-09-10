@@ -1,0 +1,22 @@
+{
+  "name": "com.unity.logger",
+  "version": "1.0.0",
+  "displayName": "Runtime Logger for Android/iOS",
+  "description": "This package creates runtime console. \nTo setup simply drag prefab onto start scene. \nTo change visibility of 'Open Logger' button use 3 finger touch gesture.",
+  "unity": "2017.1",
+  "unityRelease": "0b5",
+  "keywords": [
+    "Runtime",
+    "Extension",
+    "Async"
+  ],
+  "dependencies": {
+    "com.unity.async-extension": "1.0.0"
+  },
+  "author": {
+    "name": "Valerii Dryl",
+    "email": "taurenvd@gmail.com",
+    "url": "https://www.unity3d.com"
+  },
+  "type": "tool"
+}
