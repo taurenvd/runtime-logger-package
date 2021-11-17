@@ -11,3 +11,11 @@ Only iOS and Android mode
 ### Added
 - Use async/await modifiers
 - Convert coroutines to async methods
+
+## [1.1.0] - 2021-11-17
+### Changed
+- Scroll view replaced with page system to prevent high memory impact
+
+### Added
+- Time data to logs
+- Limit max logs capacity to 1000

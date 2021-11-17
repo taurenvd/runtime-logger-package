@@ -4,7 +4,6 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 using System.Reflection;
-using Sirenix.OdinInspector;
 
 #if UNITY_NOTIFICATIONS
 using NotificationSamples; 
@@ -14,7 +13,7 @@ using NotificationSamples;
 [RequireComponent(typeof(Logger))]
 public class LoggerFuncsBase : MonoBehaviour
 {
-    [SerializeField, ReadOnly] protected Logger _logger;
+    [SerializeField] protected Logger _logger;
 
     public virtual BindingFlags ParseFlags => BindingFlags.Instance | BindingFlags.DeclaredOnly | BindingFlags.Public;
 
