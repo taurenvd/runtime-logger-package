@@ -220,6 +220,17 @@ public class Logger : MonoBehaviour
             }
         });
         
+        m_log_views = new List<LogItemView>(m_max_elements);
+        
+        for (int i = 0; i < m_max_elements; i++)
+        {
+            m_log_views.Add(null);
+            
+            var item = GetFromPool(i);
+
+            m_log_views[i] = item;
+        }
+        
         OnRectTransformDimensionsChange();
     }
     void Start()
@@ -237,17 +248,6 @@ public class Logger : MonoBehaviour
             btn.SetActive(true);
         }
 
-        m_log_views = new List<LogItemView>(m_max_elements);
-        
-        for (int i = 0; i < m_max_elements; i++)
-        {
-            m_log_views.Add(null);
-            
-            var item = GetFromPool(i);
-
-            m_log_views[i] = item;
-        }
-        
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
         ChangeDebuggerState();
 #endif
