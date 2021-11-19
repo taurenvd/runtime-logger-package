@@ -19,3 +19,8 @@ Only iOS and Android mode
 ### Added
 - Time data to logs
 - Limit max logs capacity to 1000
+
+## [1.1.1] - 2021-11-19
+### Fixed
+- Layout
+- Init issue

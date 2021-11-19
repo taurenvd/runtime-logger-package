@@ -1,6 +1,6 @@
 {
   "name": "com.unity.logger",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "displayName": "Runtime Logger for Android/iOS",
   "description": "This package creates runtime console. \nTo setup simply drag prefab onto start scene. \nTo change visibility of 'Open Logger' button use 3 finger touch gesture.",
   "unity": "2017.1",
