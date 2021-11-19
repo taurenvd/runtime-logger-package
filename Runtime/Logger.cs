@@ -82,7 +82,7 @@ public class Logger : MonoBehaviour
     [SerializeField] Button m_prev_page;
 
     [Header("Initialization")]
-    [SerializeField, Range(1, 20)] int m_max_elements = 10;
+    [SerializeField, Range(1, 100)] int m_max_elements = 10;
     [Space]
     [SerializeField] List<LogType> m_allowed_logs;
     [Space]
@@ -230,9 +230,8 @@ public class Logger : MonoBehaviour
 
             m_log_views[i] = item;
         }
-        
-        OnRectTransformDimensionsChange();
     }
+    
     void Start()
     {
         foreach (var func_name in m_funcs)
@@ -261,20 +260,6 @@ public class Logger : MonoBehaviour
         Application.logMessageReceived -= AddLog;
     }
 
-    void OnRectTransformDimensionsChange()
-    {
-        if (m_canvas_scaler)
-        {
-            switch (Screen.orientation)
-            {
-                case ScreenOrientation.Portrait: m_canvas_scaler.matchWidthOrHeight = 1f; break;
-                case ScreenOrientation.Landscape: m_canvas_scaler.matchWidthOrHeight = 0f; break;
-
-                default: break;
-            }
-        }
-    }
-    
     void Update()
     {
         if (Input.touchCount == 3)
